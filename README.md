@@ -22,7 +22,7 @@ The frontend is a minimal JavaScript application, and requires npm to build, tes
 ### If you are missing .NET
 If you are missing .NET, you can install it by following the instructions here: https://dotnet.microsoft.com/download - or if you are using an Pluralsight cloud server, you can run the following command inside it:
 ```bash
-sudo apt update && sudo apt install -y dotnet-sdk-8.0
+sudo apt update && sudo apt install -y dotnet-sdk-10.0
 ```
 
 ### If you are missing npm
