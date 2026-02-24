@@ -13,11 +13,10 @@ jobs:
       with:                                            # This section is needed if you need to pass arguments to the action
         who-to-greet: 'Mona the Octocat'
 
-    - name: 
-          runs: 'dotnet build`
-          runs: 'cd'
-          runs: 'cd DotnetTemplate.Web'
-          runs: 'npm install'
-          runs: 'dotnet test'
-          runs: 'npm t'
-          runs: 'npm run lint'
+      runs: 'dotnet build`
+      runs: 'cd'
+      runs: 'cd DotnetTemplate.Web'
+      runs: 'npm install'
+      runs: 'dotnet test'
+      runs: 'npm t'
+      runs: 'npm run lint'
