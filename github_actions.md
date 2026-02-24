@@ -56,7 +56,20 @@ jobs:
 ```
 * Specify `uses` followed by the name of the action. The name of the action is of the form `GitHubUsername/RepositoryName` and you can find them by searching the [marketplace](https://github.com/marketplace?type=actions). Anyone can publish actions - you could create your own or fork an existing one. If it is supplied by GitHub themselves, the username will be `actions`. For example:
 ```yaml
+name: Continuous Integration
+on: [push]
 
+jobs:
+  build:
+    name: Build and test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Hello world
+      uses: actions/hello-world-javascript-action@v1.1 # Name of the action. This uses https://github.com/actions/hello-world-javascript-action
+      with:                                            # This section is needed if you need to pass arguments to the action
+        who-to-greet: 'Mona the Octocat'
 ```
 
 You should amend your workflow file so that it:
