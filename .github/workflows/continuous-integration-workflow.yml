@@ -10,13 +10,16 @@ jobs:
 
     - name: Hello world
       uses: actions/hello-world-javascript-action@v1.1 # Name of the action. This uses https://github.com/actions/hello-world-javascript-action
-      with:                                            # This section is needed if you need to pass arguments to the action
+      with: # This section is needed if you need to pass arguments to the action
         who-to-greet: 'Mona the Octocat'
 
-        uses: 'dotnet build`
-        uses: 'cd'
-        uses: 'cd DotnetTemplate.Web'
-        uses: 'npm install'
-        uses: 'dotnet test'
-        uses: 'npm t'
-        uses: 'npm run lint'
+
+    - name: commands
+      run: dotnet build
+    - run: npm install
+      working-directory: 'DotnetTemplate.Web'
+    - run: dotnet test
+    - run: npm t
+    - run: npm run lint
+    
+    
